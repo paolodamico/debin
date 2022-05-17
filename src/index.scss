@@ -1,0 +1,97 @@
+@import "_vars";
+
+:root {
+  --primary: #{$primary};
+  --success: #{$success};
+  --warning: #{$warning};
+  --danger: #{$danger};
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $bg_base;
+  color: $text_default;
+  font-size: 14px;
+}
+
+code {
+  font-family: $font_mono;
+}
+
+.scene-main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.scene {
+  flex-grow: 1;
+}
+
+a {
+  color: lighten($primary, 15%);
+  text-decoration: none;
+}
+
+// Spacing
+
+.mt {
+  margin-top: $default_spacing;
+}
+
+.mb {
+  margin-bottom: $default_spacing;
+}
+
+// Forms
+
+textarea,
+select,
+input[type="text"] {
+  border-radius: $radius;
+  background-color: $bg_overlay_light;
+  border: 0;
+  padding: $default_spacing * 0.5;
+  color: $text_default;
+  outline: 0;
+
+  &:disabled {
+    cursor: not-allowed;
+    color: $text_muted;
+    background-color: rgba($bg_overlay_light, 60%);
+  }
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.form-error {
+  color: $danger;
+  font-weight: bold;
+  border: 1px solid $danger;
+  border-radius: $radius;
+  padding: $default_spacing * 0.5;
+  margin-top: $default_spacing;
+  text-align: center;
+}
+
+// Shared (multiple scenes)
+
+.message-form {
+  max-width: 90%;
+  width: 450px;
+
+  textarea {
+    width: calc(100% - $default_spacing);
+    resize: none;
+    height: 250px;
+  }
+}

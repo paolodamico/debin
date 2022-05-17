@@ -1,0 +1,59 @@
+@import "../vars";
+
+.btn {
+  border-radius: $radius;
+  background-color: $primary;
+  color: $text_default;
+  padding: $default_spacing * 0.75 $default_spacing;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+
+  &:hover:not(:disabled) {
+    background-color: lighten($primary, 5%);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+  }
+
+  &.block {
+    width: 100%;
+  }
+
+  &.success {
+    background-color: $success;
+
+    &:hover:not(:disabled) {
+      background-color: lighten($success, 5%);
+    }
+  }
+
+  &.warning {
+    background-color: $warning;
+
+    &:hover:not(:disabled) {
+      background-color: lighten($warning, 5%);
+    }
+  }
+
+  &.danger {
+    background-color: $danger;
+
+    &:hover:not(:disabled) {
+      background-color: lighten($danger, 5%);
+    }
+  }
+
+  .spinner,
+  .btn-icon {
+    margin-right: 4px;
+  }
+}

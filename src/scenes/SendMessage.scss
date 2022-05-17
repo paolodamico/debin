@@ -1,0 +1,22 @@
+@import "../vars";
+
+.scene-send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  flex-direction: column;
+  min-height: 550px;
+
+  .share-link {
+    margin-top: $default_spacing * 2;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
+
+    &.shown {
+      max-height: 500px;
+    }
+  }
+}

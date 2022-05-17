@@ -1,0 +1,42 @@
+@import "../_vars";
+
+.header {
+  width: calc(100% - $default_spacing * 2);
+  display: flex;
+  padding: $default_spacing;
+  align-items: center;
+
+  .logo-container {
+    margin-right: $default_spacing * 0.5;
+    svg {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .header-inner-main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    h1 {
+      margin: 0;
+    }
+  }
+}
+
+.connection-status {
+  display: flex;
+  align-items: center;
+  .indicator {
+    margin-right: $default_spacing * 0.25;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: $warning;
+    display: inline-block;
+    border-radius: 50%;
+
+    &.connected {
+      background-color: $success;
+    }
+  }
+}

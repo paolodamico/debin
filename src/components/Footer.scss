@@ -1,0 +1,12 @@
+@import "../vars";
+
+footer {
+  border-top: 1px solid $bg_overlay_light;
+  width: calc(100% - $default_spacing * 2);
+  padding: $default_spacing;
+  display: flex;
+
+  .footer-main {
+    flex-grow: 1;
+  }
+}

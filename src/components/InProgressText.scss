@@ -1,0 +1,89 @@
+@import "../vars";
+
+.in-progress-text {
+  overflow: hidden;
+  position: relative;
+
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-family: $font_mono;
+
+  .container {
+    overflow: hidden;
+    height: 40px;
+
+    &:before {
+      content: "[";
+      left: 0;
+      margin-left: -6px;
+    }
+
+    &:after {
+      content: "]";
+      position: absolute;
+      right: 0;
+      margin-right: -6px;
+    }
+
+    &:after,
+    &:before {
+      position: absolute;
+      top: 0;
+
+      color: #16a085;
+      font-size: 2em;
+      line-height: 40px;
+
+      animation-name: opacity;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    .list {
+      margin-top: 0;
+      padding: 0;
+      padding-left: $default_spacing;
+      list-style: none;
+      text-align: center;
+
+      animation-name: change;
+      animation-duration: 14s;
+      animation-fill-mode: forwards;
+
+      .item {
+        line-height: 2.2em;
+        margin: 0;
+      }
+    }
+  }
+
+  @keyframes opacity {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes change {
+    0%,
+    12.66% {
+      transform: translate3d(0, 0, 0);
+    }
+    16.66%,
+    29.32% {
+      transform: translate3d(0, -25%, 0);
+    }
+    33.32%,
+    45.98% {
+      transform: translate3d(0, -50%, 0);
+    }
+    49.98%,
+    62.64%,
+    100% {
+      transform: translate3d(0, -75%, 0);
+    }
+  }
+}

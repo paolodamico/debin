@@ -1,0 +1,34 @@
+@import "../vars";
+
+.scene-retrieve {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  flex-direction: column;
+
+  .loading {
+    text-align: center;
+    min-width: 340px;
+
+    .connection-text {
+      font-size: 1.2em;
+      line-height: 1.5em;
+      font-family: $font_mono;
+    }
+  }
+
+  .errored {
+    text-align: center;
+    .error-icon {
+      font-size: 5em;
+      color: $danger;
+    }
+    .error-message {
+      margin-top: $default_spacing;
+      font-size: 1.3em;
+      font-family: $font_mono;
+      max-width: 500px;
+    }
+  }
+}

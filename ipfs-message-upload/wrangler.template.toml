@@ -1,0 +1,14 @@
+# USE THIS FILE AS A TEMPLATE; REMEMBER TO RENAME TO `wrangler.toml`
+name = "ipfs-message-upload"
+compatibility_date = "2022-05-21"
+main = "./index.js"
+
+
+# OPTIONAL: Use custom route (remember to add a proxied DNS record to your DNS zone on Cloudflare)
+# workers_dev = false
+# route = "myroute.mydomain.com"
+
+
+# Environment variables (set below)
+[vars]
+WEB3_STORAGE_TOKEN = "example_token"

@@ -1,0 +1,27 @@
+@import "../vars";
+
+.input-with-copy-wrapper {
+  position: relative;
+  .copy-helper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    padding: 0 $default_spacing * 0.7;
+    background-color: $bg_overlay;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    svg {
+      height: 1.1em;
+      width: 1.1em;
+    }
+  }
+
+  input[type="text"] {
+    width: calc(100% - $default_spacing);
+  }
+}
